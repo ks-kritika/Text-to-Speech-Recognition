@@ -11,7 +11,7 @@ voices = engine.getProperty('voices')
 print(voices)
 engine.setProperty('voice', voices[0].id)   #for male
 
-engine.say("I LOVE YOU")
+engine.say("Hello, GitHub")
 engine.runAndWait()
 
 engine.setProperty('volume', 50000)
@@ -21,12 +21,12 @@ print(voices)
 
 engine.setProperty('voice', voices[1].id)  #for female
 
-engine.say("I LOVE YOU MORE")
+engine.say("Hello, GitHub")
 engine.runAndWait()
 
 with open('all lang') as f:
     for item in f.readlines():
-        engine.say(item)
+        engine.say(item)   #iterate through 'all lang' file and speak every word
 engine.runAndWait()
 
 engine.stop()
